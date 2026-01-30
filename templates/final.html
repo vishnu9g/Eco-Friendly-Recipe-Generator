@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco-Friendly Recipe Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f9f4; padding: 20px; color: #333; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px #d3e8d3; }
+        h1, h2, h3 { color: #2d7a2d; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        table, th, td { border: 1px solid #cde5cd; }
+        th { background: #e9f7e9; padding: 10px; text-align: left; }
+        td { padding: 10px; }
+        .section { margin-top: 20px; }
+        .eco { background: #eafbea; padding: 15px; border-left: 5px solid #2d7a2d; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 Your Eco-Friendly Recipe</h1>
+
+        <!-- Render Recipe HTML -->
+        <div class="section">
+            {{ recipe | safe }}
+        </div>
+
+        <!-- Render Carbon Footprint HTML -->
+        <div class="section eco">
+            <h3>🌍 Carbon Footprint</h3>
+            {{ carbon | safe }}
+        </div>
+    </div>
+</body>
+</html>
