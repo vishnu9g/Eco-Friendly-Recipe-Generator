@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyAtiiyPZ-OAAm7fi0tZ1kUbeMQerwlcSO0")
+genai.configure(api_key="")
 
 model = genai.GenerativeModel("models/gemini-flash-latest")
 
@@ -56,3 +56,4 @@ def generate():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
